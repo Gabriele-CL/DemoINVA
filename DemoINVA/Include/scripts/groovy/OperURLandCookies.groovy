@@ -34,7 +34,7 @@ public class OperURLandCookies {
 
 	@When('User accept cookies')
 	def AcceptCookies() {
-		
+
 		WebUI.click('Cookies Button')
 		WebUI.delay(3)
 	}

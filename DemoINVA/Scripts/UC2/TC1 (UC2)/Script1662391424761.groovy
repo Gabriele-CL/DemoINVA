@@ -21,3 +21,11 @@ CucumberKW.runFeatureFile('Include/features/DemoINVA/NavigateURLandAcceptCookies
 
 CucumberKW.runFeatureFile('Include/features/DemoINVA/Login.feature')
 
+'Enter student last name'
+WebUI.setText('Last name set', 'last name', FailureHandling.STOP_ON_FAILURE)
+
+'Click on search'
+WebUI.click('search button', FailureHandling.STOP_ON_FAILURE)
+
+'Click on icon list'
+WebUI.click('icon list', FailureHandling.STOP_ON_FAILURE)

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>As an admin by entering a last name I can access the site's registry</description>
    <name>TC1 (UC3)</name>
    <tag></tag>
    <comment></comment>
