@@ -44,33 +44,32 @@ import cucumber.api.java.en.When
 
 
 class Login {
-	@Given('User click on login')
+	@Given('User click on login button')
 	def clickOnLogin() {
 		WebUI.click('Click on Login')
 	}
-	
+
 	@When('User enter username and password')
 	def enterCredentials() {
-		WebUI.setText('User set', 'admin')
-		WebUI.setText('Pass set', 'password')
+		WebUI.setText('User set', username)
+		WebUI.setText('Pass set', password)
 	}
-	
+
 	@And('User click on login')
 	def LoginTheSite() {
-		WebUI.click('Login Button')	
+		WebUI.click('Login Button')
 		WebUI.delay(5)
 	}
-	
+
 	@Then('User is redirected on Homepage')
 	def getURL() {
 		def actualURL = WebUI.getUrl()
-		
+
 		if(actualURL.equals(GlobalVariable.baseUrlLogged)) {
-			
+
 			KeywordUtil.markPassed('User is logged')
 		}else {
-			WebUI.verifyElementPresent('Messaggio di errore', 0)
+			WebUI.verifyElementPresent('Messaggio di errore', 5, FailureHandling.OPTIONAL)
 		}
-			
 	}
 }

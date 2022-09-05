@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>As admin if I enter a last name, it pops up a list with three rows</description>
+   <name>TC1</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>bebec6e1-9518-4044-85ab-e03be87dc9a1</testCaseGuid>
+</TestCaseEntity>

@@ -16,4 +16,19 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.util.KeywordUtil
+
+CucumberKW.runFeatureFile('Include/features/DemoINVA/NavigateURLandAcceptCookies.feature')
+
+CucumberKW.runFeatureFile('Include/features/DemoINVA/Login.feature')
+
+'Verify that the user is not logged in to the site'
+
+String actualURL = WebUI.getUrl()
+
+if(actualURL.equals(GlobalVariable.baseUrl)) {
+	KeywordUtil.markPassed('User is not logged in the Site')
+}else {
+	KeywordUtil.markFailedAndStop('User is logged with invalid credentials')
+}
 
