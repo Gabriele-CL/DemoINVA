@@ -14,4 +14,14 @@
       <initValue>'https://10.196.175.16/backoffice/ricerca'</initValue>
       <name>baseUrlLogged</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://10.196.175.16/backoffice/domanda/15/anagrafica'</initValue>
+      <name>baseUrlSearch</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://10.196.175.16/backoffice/domanda/15/istruttoria'</initValue>
+      <name>baseUrlIstruttoria</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

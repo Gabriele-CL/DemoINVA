@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description>As an unregistered user if I enter invalid credentials, an error message should appear</description>
-   <name>TC2</name>
+   <name>TC2 (UC1)</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>57de70f8-6d52-45d3-9862-6286cb5dbea4</testCaseGuid>
