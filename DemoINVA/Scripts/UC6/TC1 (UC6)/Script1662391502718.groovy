@@ -16,7 +16,38 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.util.KeywordUtil
 
 CucumberKW.runFeatureFile('Include/features/DemoINVA/NavigateURLandAcceptCookies.feature')
 
 CucumberKW.runFeatureFile('Include/features/DemoINVA/Login.feature')
+
+'Enter student last name'
+WebUI.setText('Last name set', 'last name', FailureHandling.STOP_ON_FAILURE)
+
+'Click on search'
+WebUI.click('search button', FailureHandling.STOP_ON_FAILURE)
+
+'Click on icon list'
+WebUI.click('icon list', FailureHandling.STOP_ON_FAILURE)
+
+'Click on note'
+WebUI.click('note', FailureHandling.STOP_ON_FAILURE)
+
+'Add note'
+WebUI.setText('Note', 'Note da aggiungere', FailureHandling.STOP_ON_FAILURE)
+
+'Click on save'
+WebUI.click('save button', FailureHandling.STOP_ON_FAILURE)
+
+'Verify message Salvataggio avvenuto con successo appears'
+WebUI.verifyElementPresent('salvataggio', 0, FailureHandling.STOP_ON_FAILURE)
+
+def save = WebUI.getText('salvataggio', FailureHandling.STOP_ON_FAILURE)
+
+if(save.contains('Salvataggio avvenuto con successo')) {
+	KeywordUtil.markPassed('The message appears')
+}else {
+	KeywordUtil.markFailedAndStop('The message is not appears')
+}
+	

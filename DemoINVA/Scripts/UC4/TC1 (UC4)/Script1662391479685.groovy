@@ -16,4 +16,30 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.util.KeywordUtil
 
+CucumberKW.runFeatureFile('Include/features/DemoINVA/NavigateURLandAcceptCookies.feature')
+
+CucumberKW.runFeatureFile('Include/features/DemoINVA/Login.feature')
+
+'Enter student last name'
+WebUI.setText('Last name set', 'last name', FailureHandling.STOP_ON_FAILURE)
+
+'Click on search'
+WebUI.click('search button', FailureHandling.STOP_ON_FAILURE)
+
+'Click on icon list'
+WebUI.click('icon list', FailureHandling.STOP_ON_FAILURE)
+
+'Click on Istruttoria'
+
+WebUI.click('Istruttoria', FailureHandling.STOP_ON_FAILURE)
+
+'Verify actual url is correct'
+def actualUrl = WebUI.getUrl()
+
+if(actualUrl.equals(GlobalVariable.baseUrlIstruttoria)) {
+	KeywordUtil.markPassed('The url is correct')
+}else {
+	KeywordUtil.markFailedAndStop('The url is not correct')
+}
