@@ -4,4 +4,14 @@
    <name>default</name>
    <tag></tag>
    <defaultProfile>true</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://10.196.175.16/'</initValue>
+      <name>baseUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://10.196.175.16/backoffice/ricerca'</initValue>
+      <name>baseUrlLogged</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
